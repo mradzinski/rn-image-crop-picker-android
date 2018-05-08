@@ -47,7 +47,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.Callable;
 
-class PickerModule extends ReactContextBaseJavaModule implements ActivityEventListener {
+public class PickerModule extends ReactContextBaseJavaModule implements ActivityEventListener {
 
     private static final int IMAGE_PICKER_REQUEST = 61110;
     private static final int CAMERA_PICKER_REQUEST = 61111;
@@ -97,7 +97,7 @@ class PickerModule extends ReactContextBaseJavaModule implements ActivityEventLi
     private Compression compression = new Compression();
     private ReactApplicationContext reactContext = null;
 
-    PickerModule(ReactApplicationContext reactContext) {
+    public PickerModule(ReactApplicationContext reactContext) {
         super(reactContext);
         reactContext.addActivityEventListener(this);
         this.reactContext = reactContext;
